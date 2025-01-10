@@ -89,8 +89,22 @@ def detect_potato_disease():
 
 # Specific function to detect soyabean disease
 def detect_soyabean_disease():
-    model_path = os.path.join(os.getcwd(), "models", "soyabean_disease_detector.tflite")
-    return detect_disease(model_path=model_path, class_labels=["CATERPILLAR", "DIABROTICA_SPECIOSA", "HEALTHY", "RANDOM"])
+    model_path = os.path.join(os.getcwd(), "models", "soyabean_disease_detector_1.tflite")
+    return detect_disease(
+        model_path=model_path,
+        class_labels=[
+            "Mossaic Virus", 
+            "Southern blight", 
+            "Sudden Death Syndrone", 
+            "Yellow Mosaic", 
+            "bacterial_blight",
+            "brown_spot",
+            "crestamento",
+            "ferrugen",
+            "powdery_mildew",
+            "septoria"
+        ]
+    )
 
 # Specific function to detect maize disease
 def detect_maize_disease():
